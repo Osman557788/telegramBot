@@ -14,7 +14,7 @@ use Telegram\Bot\Api;
 |
 */
 
-Route::post('/<token>', function () {
+Route::post('/<token>/webhook', function () {
     $update = Telegram::commandsHandler(true);
     
     // Commands handler method returns an Update object.
