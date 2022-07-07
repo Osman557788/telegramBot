@@ -16,7 +16,7 @@ use Telegram\Bot\Api;
 
 Route::get('/', function () {
 
-    $telegram = new Api(config('telegram.token'));
+    $telegram = new Api();
     return $response = $telegram->getMe();
     return $telegram->sendMessage(['chat_id'=> 44444,'text' => 'Hello World']);
 
