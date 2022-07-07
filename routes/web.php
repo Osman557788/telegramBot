@@ -14,10 +14,12 @@ use Telegram\Bot\Api;
 |
 */
 
-Route::post('/', function () {
-
-    $telegram = new Api('5418190341:AAGrnoVAGAuIZD9bJdSczxHMM-E37tFyODs');
-    return $updates = $telegram->getMe();
-    // return $telegram->sendMessage(['chat_id'=> 44444,'text' => 'Hello World']);
-
+Route::post('/<token>', function () {
+    $update = Telegram::commandsHandler(true);
+    
+    // Commands handler method returns an Update object.
+    // So you can further process $update object 
+    // to however you want.
+    
+    return 'ok';
 });
