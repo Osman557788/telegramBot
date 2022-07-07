@@ -16,6 +16,6 @@ use Telegram\Bot\Api;
 
 Route::get('/', function () {
 
-    $telegram = new Api('BOT TOKEN');
+    $telegram = new Api(config('telegram.token'));
     return $response = $telegram->getMe();
 });
