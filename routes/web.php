@@ -14,7 +14,7 @@ use Telegram\Bot\Api;
 |
 */
 
-Route::get('/', function () {
+Route::post('/', function () {
 
     $telegram = new Api('5418190341:AAGrnoVAGAuIZD9bJdSczxHMM-E37tFyODs');
     return $updates = $telegram->getMe();
