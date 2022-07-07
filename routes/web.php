@@ -16,7 +16,7 @@ use Telegram\Bot\Api;
 
 Route::get('/', function () {
 
-    $telegram = new Api();
+    $telegram = new Api('5418190341:AAGrnoVAGAuIZD9bJdSczxHMM-E37tFyODs');
     return $updates = $telegram->getUpdate();
     // return $telegram->sendMessage(['chat_id'=> 44444,'text' => 'Hello World']);
 
